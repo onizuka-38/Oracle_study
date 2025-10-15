@@ -1,2 +1,5 @@
 .git/.env
 */.env
+.env
+*/.env
+langchain/.env
