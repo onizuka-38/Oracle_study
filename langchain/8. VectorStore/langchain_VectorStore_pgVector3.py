@@ -17,7 +17,7 @@ db_config = {
 }
 
 COLLECTION_NAME = "test_db"
-FILE_PATH = "8. VectorStore/data/SPRi AI Brief_10월호_산업동향_1002_F.pdf"
+FILE_PATH = "../data/SPRi AI Brief_10월호_산업동향_1002_F.pdf"
 
 # --- 2. psycopg를 사용하여 vector extension 설치 ---
 conn = None
