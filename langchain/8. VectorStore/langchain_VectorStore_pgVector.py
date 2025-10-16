@@ -7,7 +7,7 @@ load_dotenv()
 
 # 1. 연결 정보를 딕셔너리로 정의
 db_config = {
-    'host': 'localhost',
+    'host': '127.0.0.1',
     'port': 5432,
     'database': 'testdb', 
     'user': 'test',          
