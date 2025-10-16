@@ -21,7 +21,7 @@ print("=" * 80)
 print("\n[1단계] 문서 로드 (Document Loader)")
 print("-" * 80)
 
-FILE_PATH = "9. Retriever/data/SPRi AI Brief_10월호_산업동향_1002_F.pdf"
+FILE_PATH = "../data/SPRi AI Brief_10월호_산업동향_1002_F.pdf"
 loader = PyPDFLoader(FILE_PATH)
 
 # PDF 파일을 페이지별로 로드
