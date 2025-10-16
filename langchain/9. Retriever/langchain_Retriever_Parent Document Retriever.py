@@ -18,7 +18,7 @@ db_config = {
     'password': '5748'
 }
 
-FILE_PATH = "8. VectorStore/data/SPRi AI Brief_10월호_산업동향_1002_F.pdf"
+FILE_PATH = "../data/SPRi AI Brief_10월호_산업동향_1002_F.pdf"
 
 # PDF 로드
 loader = PyPDFLoader(FILE_PATH)

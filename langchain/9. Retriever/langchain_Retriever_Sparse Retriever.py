@@ -5,7 +5,7 @@ from langchain_community.retrievers import BM25Retriever
 
 load_dotenv()
 
-FILE_PATH = "9. Retriever/data/SPRi AI Brief_10월호_산업동향_1002_F.pdf"
+FILE_PATH = "../data/SPRi AI Brief_10월호_산업동향_1002_F.pdf"
 
 # PDF 로드 및 분할
 loader = PyPDFLoader(FILE_PATH)
