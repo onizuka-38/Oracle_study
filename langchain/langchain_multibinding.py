@@ -44,4 +44,33 @@ prompt = ChatPromptTemplate.from_messages([
 agent = create_tool_calling_agent(llm, tools, prompt=prompt)
 
 # 에이전트 실행
-agent_executor = AgentExecutor.from_agent_and_tools(agent=agent, tools=tools, verbose=True)
+agent_executor = AgentExecutor(agent=agent, tools=tools, verbose=True, handle_parsing_errors=True)
+
+# 실행 예제
+if __name__ == "__main__":
+    # 예제 1: 구글 검색 사용
+    print("=" * 50)
+    print("질문1: 2024년 노벨 화학상 수상자는?")
+    print("=" * 50)
+    response1 = agent_executor.invoke({
+        "input": "질문1: 2024년 노벨 화학상 수상자는?"
+    })
+    print(f"\n답변 : {response1['output']}")
+    
+    # 예제 2: 계산기 사용
+    print("=" * 50)
+    print("질문2: 123*456 을 계산하여 반환합니다.")
+    print("=" * 50)
+    response2 = agent_executor.invoke({
+        "input": "질문2: 123*456 을 계산하여 반환합니다."
+    })
+    print(f"\n답변 : {response2['output']}")
+    
+    # 예제 3 : 검색과 계산 조합
+    print("=" * 50)
+    print("질문3: 현재 비트코인 가격을 알려주고 10개 구매시 비용은?")
+    print("=" * 50)
+    response3 = agent_executor.invoke({
+        "input": "질문3: 현재 비트코인 가격을 알려주고 10개 구매시 비용은?"
+    })
+    print(f"\n답변 : {response3['output']}")
